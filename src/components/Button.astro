@@ -1,0 +1,17 @@
+---
+export interface Props {
+  text: string;
+  type:string;
+}
+
+const { text, type } = Astro.props as Props;
+
+
+const btnPrimary = "bg-purple focus:ring-purple active:bg-indigo-800 shadow-lg hover:-translate-y-0.5 transform transition inline-block px-4 py-2.5 text-sm sm:text-base capitalize text-white font-semibold rounded-2xl focus:outline-none focus:ring focus:ring-offset-2 focus:ring-opacity-50";
+const btnSecondary = "text-purple bg-gray-300 focus:ring-gray-300  active:bg-gray-400 inline-block px-4 py-2.5 text-sm sm:text-base capitalize font-semibold rounded-2xl focus:outline-none focus:ring focus:ring-offset-2 focus:ring-opacity-50";
+
+---
+
+<button class={type === 'primary' ? btnPrimary : btnSecondary}>
+  {text}
+</button>

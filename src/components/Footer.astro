@@ -1,0 +1,57 @@
+---
+import { Image } from '@astrojs/image/components';
+---
+
+
+
+<footer class="bg-gray-800">
+    <div class="mx-[6%] text-center py-20">
+        <a href="#" aria-label="Subcode Logo" class="font-roboto font-bold text-[0px]">
+            <span class="text-yellow text-2xl">Sub</span>
+            <span class="text-2xl text-white">Code</span>
+        </a>
+
+        <nav aria-label="secondary-nav" class="my-16" >
+            <ul class="flex items-center justify-center space-x-8 text-white text-sm sm:text-lg lg:space-x-16 ">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./service.html">Service</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="my-16" >
+            <ul class="flex items-center justify-center space-x-8 text-white lg:space-x-12 ">
+                <div class="flex items-center justify-center bg-gray-700 w-8 h-8 rounded-lg">
+                  <Image alt="logo-facebook" src="/facebook.svg" width={20} height={20}/>
+                </div>
+                <div class="flex items-center justify-center bg-gray-700 w-8 h-8 rounded-lg">
+                    <Image alt="logo-twitter" src="/twitter.svg" width={20} height={20}/>
+                </div>
+                <div class="flex items-center justify-center bg-gray-700 w-8 h-8 rounded-lg">
+                    <Image alt="logo-linkedin" src="/linkedin.svg" width={20} height={20}/>
+                </div>
+                <div class="flex items-center justify-center bg-gray-700 w-8 h-8 rounded-lg">
+                    <Image alt="logo-github" src="/github.svg" width={20} height={20}/>
+                </div>
+            </ul>
+        </div>
+
+        <div class="flex justify-center space-x-4  text-[#FFFFFF80] text-sm md:text-lg md:space-x-12">
+            <p >Copyright &copy;2023</p>
+            <a href="/">Terms & Conditions</a>
+            <a href="/">Privacy</a>
+        </div>
+    </div>
+
+   
+
+</footer>
