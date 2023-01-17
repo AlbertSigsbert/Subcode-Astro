@@ -1,14 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Heading from "../components/Heading.astro";
-import Jumbotron from "../components/Jumbotron.astro";
-import Team from "../components/Team.astro";
-
+import Heading from "../components/Common/Heading.astro";
+import Jumbotron from "../components/Common/Jumbotron.astro";
+import Team from "../components/About/Team.astro";
 ---
 
-
 <Layout>
-	<Heading/>
-    <Jumbotron/>
-    <Team/>
+  <Heading
+    title="About Us"
+    subtitle="Pulvinar auctor nisl, volutpat turpis enim id."
+  />
+  <Jumbotron />
+  <Team />
 </Layout>

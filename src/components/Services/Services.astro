@@ -1,0 +1,18 @@
+---
+import { services } from  "../../data/services.astro";
+import Card from "../Common/Card.astro";
+---
+
+<div class="mx-[6%] my-16">
+  <div class="grid md:grid-cols-2 gap-10">
+    {
+      services.map((service) => (
+        <Card
+          title={service.title}
+          content={service.content}
+          svgPath={service.svgPath}
+        />
+      ))
+    }
+  </div>
+</div>

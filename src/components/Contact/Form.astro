@@ -1,0 +1,74 @@
+<form class="py-8">
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div class="col-span-2 md:col-span-1">
+            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900">First
+                name</label>
+            <input type="text" id="first_name"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                placeholder="John" required>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900">Last
+                name</label>
+            <input type="text" id="last_name"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                placeholder="Doe" required>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email
+                address</label>
+            <input type="email" id="email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                placeholder="john.doe@company.com" required>
+        </div>
+
+        <div class="col-span-2 md:col-span-1">
+            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone
+                number</label>
+            <input type="tel" id="phone"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+        </div>
+
+        <div class="col-span-2">
+            <h3 class="font-normal text-lg my-6">What service do you need?</h3>
+            <div class="grid  grid-cols-3 mb-2">
+                <div class="flex items-center mb-4">
+                    <input id="default-radio-1" type="radio" value="" name="default-radio"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                    <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900">Web
+                        Design</label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input id="default-radio-1" type="radio" value="" name="default-radio"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                    <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900">App
+                        Design</label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input id="default-radio-1" type="radio" value="" name="default-radio"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                    <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900">Graphic
+                        Design</label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input id="default-radio-1" type="radio" value="" name="default-radio"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                    <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900">Digital
+                        Marketing</label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input id="default-radio-1" type="radio" value="" name="default-radio"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                    <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900">Other</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-2">
+            <h3 class="font-normal text-lg mb-6">Message</h3>
+            <textarea id="message" rows="4"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                placeholder="Write your thoughts here..."></textarea>
+        </div>
+    </div>
+</form>

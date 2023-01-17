@@ -1,12 +1,14 @@
 ---
-
 import Layout from "../layouts/Layout.astro";
-import Heading from "../components/Heading.astro";
-import Services from "../components/Services.astro";
+import Heading from "../components/Common/Heading.astro";
+import Services from "../components/Services/Services.astro";
+
 ---
 
-
 <Layout>
-	<Heading/>
-    <Services/>
+  <Heading
+    title="Services We Provide"
+    subtitle="Enim egestas at massa senectus justo ut. Hac est."
+  />
+  <Services />
 </Layout>

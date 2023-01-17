@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Heading from "../components/Common/Heading.astro";
+import Info from "../components/Contact/Info.astro";
+import Form from "../components/Contact/Form.astro";
+---
+
+<Layout>
+    <Heading  
+    title="Contact Us"
+    subtitle="Felis nunc, aliquet quam dictum senectus nunc."/>
+    <div class="mx-[6%] grid gap-16 grid-cols-1 md:grid-cols-2 my-20">
+        <Info/>
+        <Form/>
+    </div>
+    
+</Layout>
