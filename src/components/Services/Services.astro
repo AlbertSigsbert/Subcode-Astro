@@ -1,9 +1,10 @@
 ---
-import { services } from  "../../data/services.astro";
+import { services } from  "../../data/data.astro";
 import Card from "../Common/Card.astro";
 ---
 
-<div class="mx-[6%] my-16">
+<section class="mx-[6%] mt-[6%] mb-[10%]">
+  <h1 class="my-8 text-center font-inter text-2xl">Our Services</h1>
   <div class="grid md:grid-cols-2 gap-10">
     {
       services.map((service) => (
@@ -15,4 +16,4 @@ import Card from "../Common/Card.astro";
       ))
     }
   </div>
-</div>
+</section>

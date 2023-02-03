@@ -1,0 +1,36 @@
+---
+import { Image } from "@astrojs/image/components";
+import { techStack } from "../../data/data.astro";
+---
+
+
+<section class="mx-[6%] my-[8%]">
+  <h1 class="font-semibold text-4xl text-center my-2">Our Tech Stack</h1>
+  <p class="w-3/4 mx-auto font-normal text-lg text-center">
+    We at Subcode are lucky to have expertise in a number of technologies which
+    helps us stay ahead of the ever changing tech-ecosystem. Our team has deep
+    experience with cutting-edge technologies. We&apos;ll help you create
+    solutions that override business challenges powered by leading technology
+    advancements
+  </p>
+ 
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-20 mt-14">
+    {techStack.map(stack => (
+      <div class="flex flex-col items-center">
+      <div class="w-44 h-44">
+        <Image
+        src={stack.path}
+        alt={stack.name}
+        width={170}
+        aspectRatio={1 / 1}
+        format="webp"
+        class="rounded-full"
+      />
+      </div>
+      <h1 class="font-semibold text-2xl text-center leading-7 mb-1 mt-5">
+        {stack.name}
+      </h1>
+    </div>
+    ))}
+  </div>
+</section>

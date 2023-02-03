@@ -1,57 +1,76 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Image } from "@astrojs/image/components";
+import { socialIcons } from "../../data/data.astro";
 ---
 
-
-
 <footer class="bg-gray-800">
-    <div class="mx-[6%] text-center py-20">
-        <a href="#" aria-label="Subcode Logo" class="font-roboto font-bold text-[0px]">
-            <span class="text-yellow text-2xl">Sub</span>
-            <span class="text-2xl text-white">Code</span>
-        </a>
-
-        <nav aria-label="secondary-nav" class="my-16" >
-            <ul class="flex max-[350px]:flex-col max-[350px]:space-y-4 max-[350px]:space-x-0 items-center justify-center space-x-8 text-white text-xs sm:text-lg lg:space-x-16 ">
-                <li>
-                    <a href="/index.html">Home</a>
-                </li>
-                <li>
-                    <a href="/about.html">About Us</a>
-                </li>
-                <li>
-                    <a href="/service.html">Service</a>
-                </li>
-                <li>
-                    <a href="/contact.html">Contact Us</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="my-16" >
-            <ul class="flex items-center justify-center space-x-8 text-white lg:space-x-12 ">
-                <div class="flex items-center justify-center bg-gray-700 w-8 h-8 rounded-lg">
-                  <Image alt="logo-facebook" src="/images/facebook.svg" width={20} height={20} format="webp"/>
-                </div>
-                <div class="flex items-center justify-center bg-gray-700 w-8 h-8 rounded-lg">
-                    <Image alt="logo-twitter" src="/images/twitter.svg" width={20} height={20} format="webp"/>
-                </div>
-                <div class="flex items-center justify-center bg-gray-700 w-8 h-8 rounded-lg">
-                    <Image alt="logo-linkedin" src="/images/linkedin.svg" width={20} height={20} format="webp"/>
-                </div>
-                <div class="flex items-center justify-center bg-gray-700 w-8 h-8 rounded-lg">
-                    <Image alt="logo-github" src="/images/github.svg" width={20} height={20} format="webp"/>
-                </div>
-            </ul>
-        </div>
-
-        <div class="flex max-[378px]:flex-col max-[378px]:space-y-4 max-[378px]:space-x-0 justify-center space-x-4  text-[#FFFFFF80] text-sm md:text-lg md:space-x-12">
-            <p >Copyright &copy;2023</p>
-            <a href="/">Terms & Conditions</a>
-            <a href="/">Privacy</a>
-        </div>
+  <div class="mx-[6%] text-center py-20">
+    <div class="mx-auto">
+      <a
+        href="/"
+        aria-label="Subcode Logo"
+        class="font-roboto font-bold text-[0px]"
+      >
+        <Image
+          src="/images/logo.jpg"
+          alt="Hero Image"
+          width={50}
+          aspectRatio={1 / 1}
+          format="webp"
+          class="rounded-full mx-auto mb-4"
+        />
+        <p>
+          <span class="text-yellow text-2xl">Sub</span>
+          <span class="text-2xl text-white">Code</span>
+        </p>
+      </a>
     </div>
 
-   
+    <nav aria-label="secondary-nav" class="my-16">
+      <ul
+        class="flex max-[350px]:flex-col max-[350px]:space-y-4 max-[350px]:space-x-0 items-center justify-center space-x-8 text-white text-xs sm:text-lg lg:space-x-16"
+      >
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/about.html">About Us</a>
+        </li>
+        <li>
+          <a href="/service.html">Service</a>
+        </li>
+        <li>
+          <a href="/contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
 
+    <div class="my-16">
+      <ul
+        class="flex items-center justify-center space-x-8 text-white lg:space-x-12"
+      >
+        {
+          socialIcons.map((icon) => (
+            <div class="flex items-center justify-center bg-gray-700 w-8 h-8 rounded-lg">
+              <Image
+                alt={icon.name}
+                src={icon.path}
+                width={20}
+                height={20}
+                format="webp"
+              />
+            </div>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div
+      class="flex max-[378px]:flex-col max-[378px]:space-y-4 max-[378px]:space-x-0 justify-center space-x-4 text-[#FFFFFF80] text-sm md:text-lg md:space-x-12"
+    >
+      <p>Copyright &copy;2023</p>
+      <a href="/">Terms & Conditions</a>
+      <a href="/">Privacy</a>
+    </div>
+  </div>
 </footer>

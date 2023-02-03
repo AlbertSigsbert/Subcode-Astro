@@ -3,25 +3,36 @@ import Button from "./Button.astro";
 import { Image } from "@astrojs/image/components";
 
 export interface Props {
-    
-    title: string;
-    content:string;
-    svgPath:string;
-  }
-  
-  const { title, content,svgPath } = Astro.props as Props;
+  title: string;
+  content: string;
+  svgPath: string;
+}
+
+const { title, content, svgPath } = Astro.props as Props;
 ---
 
 <div class="p-10 bg-white shadow-2xl rounded-xl md:rounded-3xl">
+  <div class="flex justify-center w-full">
     <div class="relative h-20 w-20 rounded-full bg-[#F0EEFF]">
-       <Image class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src={svgPath} alt={title} width={40} height={40} format="webp" />
-     </div>
-    <h3 class="font-semibold text-2xl py-5">{title}</h3>
-    <p class="font-normal text-lg">
-       {content}
-    </p>
-    <div class="flex max-[370px]:flex-col max-[370px]:space-y-4 max-[370px]:space-x-0 gap-1 md:gap-5 items-center mt-[30px]">
-        <Button type="primary" text="Connect Now"/>
-        <Button type="secondary" text="Our Works"/>
-     </div>
-   </div>
+      <Image
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        src={svgPath}
+        alt={title}
+        width={40}
+        height={40}
+        format="webp"
+      />
+    </div>
+  </div>
+
+  <h3 class="font-semibold text-2xl text-center py-5">{title}</h3>
+  <p class="font-normal text-center text-lg">
+    {content}
+  </p>
+  <div
+    class="flex w-full justify-center max-[370px]:flex-col max-[370px]:space-y-4 max-[370px]:space-x-0 gap-1 md:gap-5 items-center mt-[30px]"
+  >
+    <Button type="primary" text="Connect Now" />
+    <Button type="secondary" text="Our Works" />
+  </div>
+</div>

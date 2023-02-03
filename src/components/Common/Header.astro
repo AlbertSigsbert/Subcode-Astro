@@ -1,8 +1,20 @@
+---
+import { Image } from "@astrojs/image/components";
+---
+
 <header x-data="{open:false}" class="relative shadow py-2 font-inter">
     <nav aria-label="main-nav" class="mx-[6%] my-4 flex items-center justify-between">
         <a href="/" aria-label="Subcode Logo" class="font-roboto font-bold text-[0px]">
-            <span class="text-yellow text-2xl">Sub</span>
-            <span class="text-2xl">Code</span>
+            <!-- <span class="text-yellow text-2xl">Sub</span>
+            <span class="text-2xl">Code</span> -->
+            <Image
+            src="/images/logo.jpg"
+            alt="Hero Image"
+            width={50}
+            aspectRatio={1 / 1}
+            format="webp"
+            class="rounded-full"
+          />
         </a>
 
         <!-- Large Sreen Nav Items -->
@@ -35,8 +47,13 @@
             :class="open ? 'translate-x-0 ease-in' : '-translate-x-full ease-out opacity-0'" x-cloak>
             <div class="flex justify-between pt-8">
                 <a href="/" aria-label="Subcode Logo" class="font-roboto font-bold text-[0px]">
-                    <span class="text-yellow text-xl">Sub</span>
-                    <span class="text-xl">Code</span>
+                    <Image
+                    src="/images/logo.jpg"
+                    alt="Hero Image"
+                    width={30}
+                    aspectRatio={1 / 1}
+                    format="webp"
+                  />
                 </a>
                 <button aria-label="close-menu" class="inline-block pr-[10%]" @click="open = false">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

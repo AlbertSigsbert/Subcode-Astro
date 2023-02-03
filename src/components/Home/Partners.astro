@@ -1,0 +1,31 @@
+---
+import { Image } from "@astrojs/image/components";
+import { partners } from "../../data/data.astro";
+---
+
+<section class="mx-[6%] my-[10%] xl:my-[15%]">
+  <div>
+    <h1 class="font-semibold text-3xl md:text-4xl text-center">Our Partners</h1>
+    <p class="my-4 font-medium text-center text-lg text-[#00000080]">
+      Some of the partners we have worked with:-)
+    </p>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-20 mt-14">
+      {
+        partners.map((partner) => (
+        <div class="flex flex-col items-center">
+          <li class="w-44 h-44">
+            <Image
+              src={partner.path}
+              alt={partner.name}
+              width={170}
+              aspectRatio={1 / 1}
+              format="webp"
+              class="rounded-lg"
+            />
+          </li>
+          </div>
+        ))
+      }
+    </ul>
+  </div>
+</section>
