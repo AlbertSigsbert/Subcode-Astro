@@ -11,8 +11,6 @@ import alpinejs from "@astrojs/alpinejs";
 // https://astro.build/config
 import image from "@astrojs/image";
 
-// https://astro.build/config
-import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 import robotsTxt from "astro-robots-txt";
@@ -22,5 +20,5 @@ export default defineConfig({
   site: import.meta.env.SITE_URL,
   integrations: [tailwind(), alpinejs(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-  }), sitemap(), robotsTxt({ sitemap: false })]
+  }), robotsTxt()]
 });
