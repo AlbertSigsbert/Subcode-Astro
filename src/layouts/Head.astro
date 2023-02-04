@@ -8,8 +8,6 @@ export interface Props {
 
 const { title, description, imagePath, robots } = Astro.props as Props;
 
-const basePath = import.meta.env.SITE_URL;
-const imgUrl = `${basePath}${imagePath}`;
 
 ---
 
@@ -27,13 +25,13 @@ const imgUrl = `${basePath}${imagePath}`;
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={Astro.url} />
-  <meta property="og:image" content={imgUrl} />
+  <meta property="og:image" content={imagePath} />
 
   <!-- Twitter -->
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content={imgUrl} />
+  <meta name="twitter:image" content={imagePath} />
   
 
   {robots && <meta name="robots" content="noindex, nofollow" />}
