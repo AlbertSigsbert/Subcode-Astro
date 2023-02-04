@@ -12,7 +12,7 @@ import { partners } from "../../data/data.astro";
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-20 mt-14">
       {
         partners.map((partner) => (
-        <div class="flex flex-col items-center">
+       
           <li class="w-44 h-44">
             <Image
               src={partner.path}
@@ -23,7 +23,6 @@ import { partners } from "../../data/data.astro";
               class=" rounded-lg"
             />
           </li>
-          </div>
         ))
       }
     </ul>
