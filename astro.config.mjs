@@ -17,7 +17,7 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://subcode-afrika.netlify.app",
+  site: "http://www.subcode.africa",
   integrations: [tailwind(), alpinejs(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), robotsTxt()]

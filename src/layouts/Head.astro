@@ -8,7 +8,7 @@ export interface Props {
 
 const { title, description, imagePath, robots } = Astro.props as Props;
 
-const basePath = import.meta.env.SITE_URL;
+const basePath = 'http://www.subcode.africa'
 const imgUrl = `${basePath}${imagePath}`
 ---
 
